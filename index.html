@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B&K Airlines ✈️</title>
+
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="B&K Airlines Logo" class="logo-img" />
+      <span class="logo-text">B&K Airlines</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" id="homeLink" class="nav-link active">Home</a></li>
+        <li><a href="#" id="aboutLink" class="nav-link">About</a></li>
+        <li><a href="#" id="destLink" class="nav-link">Destinations</a></li>
+        <li><a href="#" id="contactLink" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="home" class="hero active">
+    <div class="hero-content">
+      <h1>Hi, <span>where</span> would you like to go?</h1>
+      <p>Discover the world with B&K Airlines. Enjoy comfort, reliability, and a world-class flying experience.</p>
+      <button id="bookBtn" class="btn-primary">Book Now</button>
+    </div>
+    <div class="hero-img">
+      <img src="airplane.png" alt="Airplane in Sky" class="airplane" />
+    </div>
+  </section>
+
+  
+  <section id="booking" class="section hidden booking-section">
+    <h2>Book Your Flight</h2>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="from">From:</label>
+        <input type="text" id="from" required placeholder="Origin" />
+      </div>
+
+      <div class="form-group">
+        <label for="to">To:</label>
+        <input type="text" id="to" required placeholder="Destination" />
+      </div>
+
+      <div class="form-group">
+        <label for="flightType">Flight Type:</label>
+        <select id="flightType" required>
+          <option value="oneway">One Way</option>
+          <option value="roundtrip">Round Trip</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="departDate">Depart Date:</label>
+        <input type="date" id="departDate" required />
+      </div>
+
+      <div id="returnDateContainer" class="form-group hidden">
+        <label for="returnDate">Return Date:</label>
+        <input type="date" id="returnDate" />
+      </div>
+
+      <div class="form-group">
+        <label for="passengers">Passengers:</label>
+        <input type="number" id="passengers" min="1" value="1" />
+      </div>
+
+      <button type="submit" class="btn-primary">Search Flights</button>
+    </form>
+  </section>
+
+ 
+  <section id="flights" class="section hidden">
+    <h2>Available Flights</h2>
+    <div id="flightList" class="flight-container"></div>
+  </section>
+
+
+  <section id="passenger" class="section hidden">
+    <h2>Passenger Information</h2>
+    <form id="passengerForm"></form>
+  </section>
+
+  
+  <section id="summary" class="section hidden">
+    <h2>Booking Summary</h2>
+    <div id="summaryDetails"></div>
+    <button id="bookNow" class="btn-primary">Book Now</button>
+    <p id="successMessage" class="hidden success">✅ Booking Successful! Thank you for flying with <b>B&K Airlines!</b></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
